@@ -1,3 +1,26 @@
+@import url("@/public/fonts/stylesheet.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "TT Octosquares";
+  }
+  body {
+    @apply bg-[#1c1f29];
+  }
+}
+
+@layer components {
+  .activeNavItem {
+    @apply border-b-[3px] border-b-[#01B2FF] border-solid;
+  }
+  .container {
+    @apply w-[1400px]  m-auto py-4;
+  }
+  .gradientBlue {
+    background: linear-gradient(90deg, #27579a 0%, #4a9ec7 92.42%);
+  }
+}
