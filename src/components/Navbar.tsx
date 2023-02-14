@@ -17,7 +17,7 @@ const Navbar = () => {
 
       <ul className="flex gap-8">
         {navbarItems.map((item, index) => (
-          <Link href={`/`}>
+          <Link href={`/`} key={index}>
             <li
               className={[
                 "text-xl p-2 text-white",
