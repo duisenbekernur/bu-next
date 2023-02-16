@@ -1,16 +1,50 @@
+import Image from "next/image";
 import React from "react";
+
+import bitcoin from "@/assets/backgrounds/bitcoin.png";
 
 const OnlineLearn = () => {
   return (
-    <div className="relative mt-7">
+    <div className="relative mt-[150px]">
       <div className="container">
         <h1 className="text-center  not-italic font-extrabold text-[50px] leading-[61px] text-white">
-          Обучение в <span className="font-extrabold text-[50px] leading-[61px] text-[#01B2FF]">LIVE - ONLINE</span> режиме:
+          Обучение в{" "}
+          <span className="font-extrabold text-[50px] leading-[61px] text-[#01B2FF]">
+            LIVE - ONLINE
+          </span>{" "}
+          режиме:
         </h1>
+
+        <ul className=" text-2xl text-white ml-[500px] mt-[100px] w-[700px] list-disc">
+          <li className="mb-[15px]">
+            3 раза в неделю, где можно во время урока задавать вопросы и
+            уточнять моменты
+          </li>
+          <li className="mb-[15px]">
+            Разработка познается в разработке - поэтому даже с нуля ребята у нас
+            начинают писать свои первые линии кода на 5-ом уроке
+          </li>
+          <li className="mb-[15px]">
+            Кодинг-задания после каждого урока, которые проверяются кураторами
+          </li>
+          <li className="mb-[15px]">
+            Если вам не понятно что либо вы задаете вопрос в нашем дискорде или
+            можете созвонится с кураторами и получить помощь с кодинг-заданиями
+          </li>
+          <li className="mb-[15px]">
+            В итоге это 10 часов прокача вашего навыка в неделю, в течении 9
+            месяцев
+          </li>
+          <li className="mb-[15px]">
+            Мы работаем при поддержке самого крупного технопарка в Средней Азии
+            - <span className="text-[#01B2FF] font-extrabold">AstanaHub </span>
+          </li>
+        </ul>
       </div>
 
       {/* left blob */}
       <svg
+        className="absolute z-10 mt-[-350px]"
         width="584"
         height="865"
         viewBox="0 0 584 865"
@@ -63,6 +97,8 @@ const OnlineLearn = () => {
           </linearGradient>
         </defs>
       </svg>
+
+      <Image className="absolute top-[150px] -z-10" src={bitcoin} alt="btc" />
 
       {/* right blob */}
       <svg
