@@ -1,4 +1,5 @@
 import Intro from "@/components/Intro";
+import Kirill from "@/components/Kirill";
 import OnlineLearn from "@/components/OnlineLearn";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -12,10 +13,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Intro /> 
+      <Intro />
 
       <OnlineLearn />
-      
+
+      <Kirill />
     </div>
   );
 };
