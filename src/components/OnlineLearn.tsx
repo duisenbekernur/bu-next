@@ -9,7 +9,7 @@ const OnlineLearn = () => {
       <div className="container">
         <h1 className="text-center  not-italic font-extrabold text-[50px] leading-[61px] text-white">
           Обучение в{" "}
-          <span className="font-extrabold text-[50px] leading-[61px] text-[#01B2FF]">
+          <span className="font-extrabold text-[50px] leading-[61px] text-[#01B2FF] text-shadow-blue italic" >
             LIVE - ONLINE
           </span>{" "}
           режиме:

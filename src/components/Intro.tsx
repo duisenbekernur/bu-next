@@ -4,12 +4,13 @@ import GlassmorphButton from "./UI/GlassmorphButton";
 import Image from "next/image";
 
 import backgroundImage from "@/assets/backgrounds/intro.png";
+import blob from "@/assets/glassmorph-button-blob.svg";
 
 const Intro = () => {
   return (
     <div className="">
       <Image
-        className="absolute -z-10 top-4 left-0 right-0 m-auto"
+        className="absolute left-1/2 transform -translate-x-1/2 top-0 -z-10"
         src={backgroundImage}
         alt="bg"
       />
@@ -54,10 +55,21 @@ const Intro = () => {
             обучиться высокооплачиваемому навыку
           </p>
 
-          <GlassmorphButton
-            width={500}
-            text="Скачать Полный Тематический План Программы BU"
-          />
+          <div className="relative">
+            <p className="z-20 text-white font-medium text-[30px] text-center absolute  left-1/2 transform -translate-x-1/2 w-full mt-4">
+              Скачать Полный Тематический План Программы BU
+            </p>
+            <div className="cursor-pointer bg-[#4A9FC7] opacity-50  text-center px-[15px] py-[18px] border-[#00aeff] border-[3px] text-shadow-blue rounded-full relative  border-solid w-max m-auto">
+              <p className="opacity-0 z-20 text-white font-medium text-[30px] text-center">
+                Скачать Полный Тематический План Программы BU
+              </p>
+              <Image
+                className="absolute bottom-[-80px] right-[150px]"
+                src={blob}
+                alt="blob"
+              />
+            </div>
+          </div>
         </section>
       </div>
 
