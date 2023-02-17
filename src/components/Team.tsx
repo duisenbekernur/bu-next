@@ -38,7 +38,8 @@ const Team = () => {
               <br />
               <a
                 href="https://nimbl.tv"
-                target="_blank"
+                // target="_blank"
+                // rel="noopener"
                 className="text-[25px] "
               >
                 https://nimbl.tv/
