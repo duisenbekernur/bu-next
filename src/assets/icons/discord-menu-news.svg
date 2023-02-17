@@ -1,0 +1,20 @@
+<svg width="73" height="69" viewBox="0 0 73 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_f_13_254)">
+    <path d="M65.5753 48.2299V12.8798C65.5753 9.36525 62.7051 6.75864 59.2199 7.05152H59.0442C52.8938 7.5787 43.551 10.7125 38.3378 13.9927L37.8399 14.3149C36.9906 14.842 35.5848 14.842 34.7354 14.3149L34.0032 13.8755C28.79 10.6246 19.4765 7.52012 13.3261 7.02223C9.8409 6.72936 7 9.36524 7 12.8505V48.2299C7 51.0415 9.28444 53.6774 12.0961 54.0288L12.9454 54.146C19.3008 54.9953 29.1122 58.2169 34.7354 61.2921L34.8526 61.3507C35.6433 61.79 36.9027 61.79 37.6642 61.3507C43.2874 58.2462 53.1281 54.9953 59.5128 54.146L60.4793 54.0288C63.2909 53.6774 65.5753 51.0415 65.5753 48.2299Z" stroke="#01B2FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M36.2877 15.2815V59.213" stroke="#01B2FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M23.8404 24.0677H17.2507" stroke="#01B2FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M26.037 32.8541H17.2507" stroke="#01B2FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <path d="M65.5753 48.2299V12.8798C65.5753 9.36525 62.7051 6.75864 59.2199 7.05152H59.0442C52.8938 7.5787 43.551 10.7125 38.3378 13.9927L37.8399 14.3149C36.9906 14.842 35.5848 14.842 34.7354 14.3149L34.0032 13.8755C28.79 10.6246 19.4765 7.52012 13.3261 7.02223C9.8409 6.72936 7 9.36524 7 12.8505V48.2299C7 51.0415 9.28444 53.6774 12.0961 54.0288L12.9454 54.146C19.3008 54.9953 29.1122 58.2169 34.7354 61.2921L34.8526 61.3507C35.6433 61.79 36.9027 61.79 37.6642 61.3507C43.2874 58.2462 53.1281 54.9953 59.5128 54.146L60.4793 54.0288C63.2909 53.6774 65.5753 51.0415 65.5753 48.2299Z" stroke="#01B2FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M36.2877 15.2815V59.213" stroke="#01B2FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M23.8404 24.0677H17.2507" stroke="#01B2FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M26.037 32.8541H17.2507" stroke="#01B2FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <defs>
+    <filter id="filter0_f_13_254" x="0" y="-0.00012207" width="72.5753" height="68.6803" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+    <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_13_254"/>
+    </filter>
+    </defs>
+    </svg>
+    
