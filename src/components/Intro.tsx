@@ -1,61 +1,93 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
-import GlassmorphButton from "./UI/GlassmorphButton";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 import backgroundImage from "@/assets/backgrounds/intro.png";
 import blob from "@/assets/glassmorph-button-blob.svg";
 
+const textAnimation = {
+  hidden: {
+    x: -200,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+};
+
 const Intro = () => {
   return (
-    <div className="">
+    <motion.div initial="hidden" whileInView="visible">
       <Image
         className="absolute left-1/2 transform -translate-x-1/2 top-0 -z-10"
         src={backgroundImage}
         alt="bg"
       />
       <div className="container">
-        <h3 className="w-[755px] mt-[100px] not-italic font-medium text-[35px] leading-[42px] text-white opacity-1">
+        <motion.h3
+          custom={1}
+          variants={textAnimation}
+          className="w-[755px] mt-[100px] not-italic font-medium text-[35px] leading-[42px] text-white opacity-1"
+        >
           это программа обучения блокчейн разработке с нуля до уровня Junior+ за
           9 месяцев{" "}
-        </h3>
+        </motion.h3>
 
         <section className="flex flex-col justify-center">
           <div className="flex m-auto flex-row items-center justify-center gap-2 mt-[100px]">
-            <div className="rounded-[30px] gradientBlue pt-[7px] pb-4 px-[18px]  w-[290px] cursor-pointer bg-slate-400 h-[125px]  flex flex-col gap-1 items-center">
+            <motion.div
+              custom={2}
+              variants={textAnimation}
+              className="rounded-[30px] gradientBlue pt-[7px] pb-4 px-[18px]  w-[290px] cursor-pointer bg-slate-400 h-[125px]  flex flex-col gap-1 items-center"
+            >
               <h1 className="italic font-semibold text-[35px] leading-[42px] text-white">
                 1 УРОК
               </h1>
               <p className="font-light text-[17px] leading-5 text-center text-white">
                 теория и механизм блокчейна, криптографии, консенсусы, узлы
               </p>
-            </div>
+            </motion.div>
             <BsArrowRight color="#fff" size="50" width="44px" />
-            <div className="rounded-[30px] gradientBlue pt-[7px] pb-4 px-[18px]  w-[290px] cursor-pointer bg-slate-400 h-[125px]  flex flex-col gap-1 items-center">
+            <motion.div
+              custom={3}
+              variants={textAnimation}
+              className="rounded-[30px] gradientBlue pt-[7px] pb-4 px-[18px]  w-[290px] cursor-pointer bg-slate-400 h-[125px]  flex flex-col gap-1 items-center"
+            >
               <h1 className="italic font-semibold text-[35px] leading-[42px] text-white">
                 2 УРОК
               </h1>
               <p className="font-light text-[17px] leading-5 text-center text-white">
                 биткоин и вся полезная информация про него
               </p>
-            </div>
+            </motion.div>
             <BsArrowRight color="#fff" size="50" width="44px" />
-            <div className="rounded-[30px] gradientBlue pt-[7px] pb-4 px-[18px]  w-[290px] cursor-pointer bg-slate-400 h-[125px]  flex flex-col gap-1 items-center">
+            <motion.div
+              custom={4}
+              variants={textAnimation}
+              className="rounded-[30px] gradientBlue pt-[7px] pb-4 px-[18px]  w-[290px] cursor-pointer bg-slate-400 h-[125px]  flex flex-col gap-1 items-center"
+            >
               <h1 className="italic font-semibold text-[35px] leading-[42px] text-white">
                 3 УРОК
               </h1>
               <p className="font-light text-[17px] leading-5 text-center text-white">
                 эфириум и вся полезная информация про него
               </p>
-            </div>
+            </motion.div>
           </div>
 
-          <p className=" italic font-light text-[17px] leading-5 text-center text-white mt-6 w-[755px] m-auto mb-[100px]">
+          <motion.p
+            variants={textAnimation}
+            custom={5}
+            className=" italic font-light text-[17px] leading-5 text-center text-white mt-6 w-[755px] m-auto mb-[100px]"
+          >
             9 месяцев - это именно тот отрезок времени, который нужен чтобы
             обучиться высокооплачиваемому навыку
-          </p>
+          </motion.p>
 
-          <div className="relative">
+          <motion.div variants={textAnimation} custom={6} className="relative">
             <p className="z-20 text-white font-medium text-[30px] text-center absolute  left-1/2 transform -translate-x-1/2 w-full mt-4">
               Скачать Полный Тематический План Программы BU
             </p>
@@ -69,7 +101,7 @@ const Intro = () => {
                 alt="blob"
               />
             </div>
-          </div>
+          </motion.div>
         </section>
       </div>
 
@@ -183,7 +215,7 @@ const Intro = () => {
           </linearGradient>
         </defs>
       </svg>
-    </div>
+    </motion.div>
   );
 };
 

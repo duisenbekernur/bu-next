@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import background from "@/assets/backgrounds/kirill-block.png";
 import kirill from "@/assets/kirill.png";
@@ -8,9 +9,25 @@ import community from "@/assets/icons/community.png";
 import education from "@/assets/icons/education.png";
 import increase from "@/assets/icons/increase.png";
 
+const textAnimation = {
+  hidden: {
+    x: -200,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.3 },
+  }),
+};
+
 const Kirill = () => {
   return (
-    <div className="w-full relative">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      className="w-full relative"
+    >
       <section className="container mt-[100px]">
         <div className="flex items-center gap-10">
           <Image src={kirill} alt="kirill" />
@@ -21,7 +38,11 @@ const Kirill = () => {
         </div>
 
         <div className="m-auto flex gap-12 flex-wrap w-[900px] mt-10">
-          <div className="flex gap-4 w-[400px] items-center">
+          <motion.div
+            custom={2}
+            variants={textAnimation}
+            className="flex gap-4 w-[400px] items-center"
+          >
             <div className="h-[60px] w-[60px] bg-[#8F9297] rounded-[50%] p-3 box-content flex items-center justify-center">
               <Image src={increase} alt="stats" />
             </div>
@@ -29,8 +50,12 @@ const Kirill = () => {
               <h1 className="text-[30px]">8 ЛЕТ</h1>
               <p className="text-[20px]">опыт обучения в разработке</p>
             </div>
-          </div>
-          <div className="flex gap-4 w-[400px] items-center">
+          </motion.div>
+          <motion.div
+            custom={4}
+            variants={textAnimation}
+            className="flex gap-4 w-[400px] items-center"
+          >
             <div className="h-[60px] w-[60px] bg-[#8F9297] rounded-[50%] p-3 box-content flex items-center justify-center">
               <Image src={education} alt="stats" />
             </div>
@@ -38,8 +63,12 @@ const Kirill = () => {
               <h1 className="text-[30px]">ОКОНЧИЛ МИФИ</h1>
               <p className="text-[20px]">по кибернетике и киберзащите</p>
             </div>
-          </div>
-          <div className="flex gap-4 w-[400px] items-center">
+          </motion.div>
+          <motion.div
+            custom={6}
+            variants={textAnimation}
+            className="flex gap-4 w-[400px] items-center"
+          >
             <div className="h-[60px] w-[60px] bg-[#8F9297] rounded-[50%] p-3 box-content flex items-center justify-center">
               <Image src={community} alt="stats" />
             </div>
@@ -47,8 +76,12 @@ const Kirill = () => {
               <h1 className="text-[30px]">1000 разработчиков</h1>
               <p className="text-[20px]">обучил C/C++/JS/Solidity/TS</p>
             </div>
-          </div>
-          <div className="flex gap-4 w-[400px] items-center">
+          </motion.div>
+          <motion.div
+            custom={8}
+            variants={textAnimation}
+            className="flex gap-4 w-[400px] items-center"
+          >
             <div className="h-[60px] w-[60px] bg-[#8F9297] rounded-[50%] p-3 box-content flex items-center justify-center">
               <Image src={check} alt="stats" />
             </div>
@@ -59,7 +92,7 @@ const Kirill = () => {
                 <br /> нашими 2 кураторами
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -124,7 +157,7 @@ const Kirill = () => {
           </linearGradient>
         </defs>
       </svg>
-    </div>
+    </motion.div>
   );
 };
 
