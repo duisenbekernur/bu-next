@@ -1,49 +1,82 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 import bitcoin from "@/assets/backgrounds/bitcoin.png";
 
+const textAnimation = {
+  hidden: {
+    y: 200,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+};
+
+const imgAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+};
+
 const OnlineLearn = () => {
   return (
-    <div className="relative mt-[150px]">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      className="relative mt-[150px]"
+    >
       <div className="container">
-        <h1 className="text-center  not-italic font-extrabold text-[50px] leading-[61px] text-white">
+        <motion.h1
+          custom={1}
+          variants={textAnimation}
+          className="text-center  not-italic font-extrabold text-[50px] leading-[61px] text-white"
+        >
           Обучение в{" "}
-          <span className="font-extrabold text-[50px] leading-[61px] text-[#01B2FF] text-shadow-blue italic" >
+          <span className="font-extrabold text-[50px] leading-[61px] text-[#01B2FF] text-shadow-blue italic">
             LIVE - ONLINE
           </span>{" "}
           режиме:
-        </h1>
+        </motion.h1>
 
         <ul className=" text-2xl text-white ml-[500px] mt-[100px] w-[700px] list-disc">
-          <li className="mb-[15px]">
+          <motion.li custom={2} variants={textAnimation} className="mb-[15px]">
             3 раза в неделю, где можно во время урока задавать вопросы и
             уточнять моменты
-          </li>
-          <li className="mb-[15px]">
+          </motion.li>
+          <motion.li custom={3} variants={textAnimation} className="mb-[15px]">
             Разработка познается в разработке - поэтому даже с нуля ребята у нас
             начинают писать свои первые линии кода на 5-ом уроке
-          </li>
-          <li className="mb-[15px]">
+          </motion.li>
+          <motion.li custom={4} variants={textAnimation} className="mb-[15px]">
             Кодинг-задания после каждого урока, которые проверяются кураторами
-          </li>
-          <li className="mb-[15px]">
+          </motion.li>
+          <motion.li custom={5} variants={textAnimation} className="mb-[15px]">
             Если вам не понятно что либо вы задаете вопрос в нашем дискорде или
             можете созвонится с кураторами и получить помощь с кодинг-заданиями
-          </li>
-          <li className="mb-[15px]">
+          </motion.li>
+          <motion.li custom={6} variants={textAnimation} className="mb-[15px]">
             В итоге это 10 часов прокача вашего навыка в неделю, в течении 9
             месяцев
-          </li>
-          <li className="mb-[15px]">
+          </motion.li>
+          <motion.li custom={7} variants={textAnimation} className="mb-[15px]">
             Мы работаем при поддержке самого крупного технопарка в Средней Азии
             - <span className="text-[#01B2FF] font-extrabold">AstanaHub </span>
-          </li>
+          </motion.li>
         </ul>
       </div>
 
       {/* left blob */}
-      <svg
+      <motion.svg
+        custom={5}
+        variants={imgAnimation}
         className="absolute z-10 mt-[-350px]"
         width="584"
         height="865"
@@ -96,12 +129,16 @@ const OnlineLearn = () => {
             <stop offset="1" stop-color="#0080FF" />
           </linearGradient>
         </defs>
-      </svg>
+      </motion.svg>
 
-      <Image className="absolute top-[150px] -z-10" src={bitcoin} alt="btc" />
+      <motion.div custom={4} variants={imgAnimation}>
+        <Image className="absolute top-[150px] -z-10" src={bitcoin} alt="btc" />
+      </motion.div>
 
       {/* right blob */}
-      <svg
+      <motion.svg
+        custom={4}
+        variants={imgAnimation}
         className="absolute right-0 -top-80"
         width="568"
         height="683"
@@ -132,8 +169,8 @@ const OnlineLearn = () => {
           </pattern>
           <image id="image0_13_81" width="1800" height="1042" />
         </defs>
-      </svg>
-    </div>
+      </motion.svg>
+    </motion.div>
   );
 };
 

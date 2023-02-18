@@ -27,7 +27,7 @@ const Pricing = () => {
           <p className="z-20 text-white font-medium text-[30px] text-center absolute  left-1/2 transform -translate-x-1/2 w-full mt-4">
             Записаться на консультацию
           </p>
-          <div className="cursor-pointer bg-[#4A9FC7] opacity-50  text-center px-[15px] py-[18px] border-[#00aeff] border-[3px] text-shadow-blue rounded-full relative  border-solid w-max m-auto">
+          <div className="border-shadow-blue  cursor-pointer bg-[#4A9FC7] opacity-50  text-center px-[15px] py-[18px] border-[#00aeff] border-[3px] text-shadow-blue rounded-full relative  border-solid w-max m-auto">
             <p className="opacity-0 z-20 text-white font-medium text-[30px] text-center">
               Записаться на консультацию
             </p>

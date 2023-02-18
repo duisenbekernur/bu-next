@@ -1,16 +1,45 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import mapBackground from "@/assets/backgrounds/map-block.svg";
 
+const textAnimation = {
+  hidden: {
+    x: -200,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+};
+
+const imgAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    opacity: 1,
+    transition: { delay: custom },
+  }),
+};
+
 const MapBlock = () => {
   return (
-    <div>
+    <motion.div >
       <div className="container">
-        <Image className="mx-auto mt-52 mb-6 " src={mapBackground} alt="bg" />
+        <motion.div initial="hidden" whileInView="visible" custom={1} variants={imgAnimation}>
+          <Image className="mx-auto mt-52 mb-6 " src={mapBackground} alt="bg" />
+        </motion.div>
 
-        <section>
-          <div className="flex gap-20 items-center mb-10">
+        <motion.section initial="hidden" whileInView="visible">
+          <motion.div
+            custom={3}
+            variants={textAnimation}
+            className="flex gap-20 items-center mb-10"
+          >
             <div className="w-[120px] shadow-[0px_0px_17px_9px_rgba(1,178,255,0.77)] bg-[#A6E4FF] px-7 rounded-full flex items-center justify-center">
               <h1 className="text-[#01B2FF] text-[65px] italic font-black">
                 1
@@ -20,8 +49,12 @@ const MapBlock = () => {
               Следующий бычий рынок - откроется огромное окно возможностей для
               блокчейн разработчика
             </p>
-          </div>
-          <div className="flex gap-20 items-center mb-10">
+          </motion.div>
+          <motion.div
+            custom={4}
+            variants={textAnimation}
+            className="flex gap-20 items-center mb-10"
+          >
             <div className="shadow-[0px_0px_17px_9px_rgba(1,178,255,0.77)] bg-[#A6E4FF] px-7 rounded-full flex items-center justify-center">
               <h1 className="text-[#01B2FF] text-[65px] italic font-black">
                 2
@@ -31,8 +64,12 @@ const MapBlock = () => {
               Компании будут поднимать инвестиции в больших размерах, писать
               план разработки, и собирать команду на 2-3 года вперед
             </p>
-          </div>
-          <div className="flex gap-20 items-center">
+          </motion.div>
+          <motion.div
+            custom={5}
+            variants={textAnimation}
+            className="flex gap-20 items-center"
+          >
             <div className="shadow-[0px_0px_17px_9px_rgba(1,178,255,0.77)] bg-[#A6E4FF] px-7 rounded-full flex items-center justify-center">
               <h1 className="text-[#01B2FF] text-[65px] italic font-black">
                 3
@@ -42,12 +79,12 @@ const MapBlock = () => {
               К этому моменту, получить навык, получить сертификат, коммерческий
               опыт работы
             </p>
-          </div>
-        </section>
+          </motion.div>
+        </motion.section>
       </div>
 
       {/* blob */}
-      <svg
+      <motion.svg
         className="absolute bottom-12"
         width="567"
         height="878"
@@ -100,8 +137,8 @@ const MapBlock = () => {
             <stop offset="1" stop-color="#0080FF" />
           </linearGradient>
         </defs>
-      </svg>
-    </div>
+      </motion.svg>
+    </motion.div>
   );
 };
 
